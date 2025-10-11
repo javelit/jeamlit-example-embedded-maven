@@ -24,7 +24,7 @@ public class App {
 
 
         // Use the imported library apache commons-math
-        Jt.divider().use();
+        Jt.divider("divider1").use();
         Jt.markdown("## Using imported apache math dependency").use();
         double[] values = {1.2, 2.3, 3.4, 4.5, 5.6};
         DescriptiveStatistics stats = new DescriptiveStatistics(values);
