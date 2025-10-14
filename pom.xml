@@ -18,7 +18,7 @@
         <dependency>
             <groupId>io.jeamlit</groupId>
             <artifactId>jeamlit</artifactId>
-            <version>0.42.0</version>
+            <version>0.44.0</version>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
