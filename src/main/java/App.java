@@ -1,4 +1,4 @@
-import io.jeamlit.core.Jt;
+import io.javelit.core.Jt;
 import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 
 public class App {

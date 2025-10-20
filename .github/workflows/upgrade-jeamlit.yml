@@ -1,4 +1,4 @@
-name: Upgrade Jeamlit Dependency
+name: Upgrade Javelit Dependency
 
 on:
   schedule:
@@ -24,8 +24,8 @@ jobs:
           java-version: '21'
           cache: 'maven'
 
-      - name: Upgrade jeamlit dependency
-        run: ./mvnw versions:use-latest-releases -Dincludes=io.jeamlit:jeamlit -DgenerateBackupPoms=false
+      - name: Upgrade javelit dependency
+        run: ./mvnw versions:use-latest-releases -Dincludes=io.javelit:javelit -DgenerateBackupPoms=false
 
       - name: Check for changes
         id: check_changes
@@ -35,7 +35,7 @@ jobs:
             echo "No changes detected"
           else
             echo "changed=true" >> $GITHUB_OUTPUT
-            NEW_VERSION=$(grep -A 2 '<groupId>io.jeamlit</groupId>' pom.xml | grep '<version>' | sed 's/.*<version>\(.*\)<\/version>.*/\1/' | tr -d ' ')
+            NEW_VERSION=$(grep -A 2 '<groupId>io.javelit</groupId>' pom.xml | grep '<version>' | sed 's/.*<version>\(.*\)<\/version>.*/\1/' | tr -d ' ')
             echo "version=$NEW_VERSION" >> $GITHUB_OUTPUT
             echo "Changes detected - new version: $NEW_VERSION"
           fi
@@ -46,5 +46,5 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add pom.xml
-          git commit -m "chore: upgrade jeamlit to version ${{ steps.check_changes.outputs.version }}"
+          git commit -m "chore: upgrade javelit to version ${{ steps.check_changes.outputs.version }}"
           git push

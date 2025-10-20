@@ -1,4 +1,4 @@
-import io.jeamlit.core.Server;
+import io.javelit.core.Server;
 
 public class Launcher {
 

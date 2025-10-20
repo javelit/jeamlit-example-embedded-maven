@@ -1,10 +1,10 @@
-# jeamlit-example-embedded-maven
-Example Jeamlit app that you can fork.
+# javelit-example-embedded-maven
+Example Javelit app that you can fork.
 **Maven setup with embedded server.**
 
 
 The key file to look at are [App.java](src/main/java/App.java), [Launcher.java](src/main/java/Launcher.java) and the [pom](pom.xml).  
-More details about this example project are available in the [documentation](https://docs.jeamlit.io/get-started/installation/embedded-vanilla).
+More details about this example project are available in the [documentation](https://docs.javelit.io/get-started/installation/embedded-vanilla).
 
 ## Requirements
 
