@@ -1,9 +1,15 @@
 import io.javelit.core.Jt;
+import io.javelit.core.Server;
 import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 
-public class App {
+public class Main {
 
     public static void main(String[] args) {
+        final var server = Server.builder(() -> app(), 8080).build();
+        server.start();
+    }
+
+    public static void app() {
         Jt.title("Hello World !").use();
 
         Jt.markdown("## A simple click app").use();
@@ -30,7 +36,5 @@ public class App {
         DescriptiveStatistics stats = new DescriptiveStatistics(values);
         double stdDev = stats.getStandardDeviation();
         Jt.text("Computed statistic with Apache commons-math: " + stdDev).use();
-
-        Jt.markdown("**OMG THE HOT-RELOAD IS REAL**").use();
     }
 }

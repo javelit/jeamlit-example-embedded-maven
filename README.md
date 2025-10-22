@@ -3,7 +3,7 @@ Example Javelit app that you can fork.
 **Maven setup with embedded server.**
 
 
-The key file to look at are [App.java](src/main/java/App.java), [Launcher.java](src/main/java/Launcher.java) and the [pom](pom.xml).  
+The key file to look at are [Main.java](src/main/java/Main.java) and the [pom](pom.xml).  
 More details about this example project are available in the [documentation](https://docs.javelit.io/get-started/installation/embedded-vanilla).
 
 ## Requirements
@@ -19,7 +19,7 @@ More details about this example project are available in the [documentation](htt
 ## Run
 
 ```bash
-./mvnw compile exec:java -Dexec.mainClass="Launcher"
+./mvnw compile exec:java -Dexec.mainClass="Main"
 ```
 
 The server will start on port 8080. Open your browser at [http://localhost:8080](http://localhost:8080).
@@ -28,9 +28,9 @@ The server will start on port 8080. Open your browser at [http://localhost:8080]
 
 ## Development
 IntelliJ HotReload works.
-1. Launch [Launcher.java](src/main/java/Launcher.java) in `Debug` mode.
+1. Launch [Main.java](src/main/java/Main.java) in `Debug` mode.
 2. Go to the web app at [http://localhost:8080](http://localhost:8080)
-2. Append the following to the [App.java](src/main/java/App.java) `main` method
+2. Append the following to the `app` method
    ```java
    Jt.markdown("**OMG THE HOT-RELOAD IS REAL**").use();
    ```
